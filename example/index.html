@@ -19,8 +19,12 @@
             border: 1px solid #333;
             opacity: .2;
             background-color: #555;
-            height: 120vh;
+            height: 500px;
             transition: opacity 1s .1s, border 1s, background-color 1s, color 1s .2s;
+        }
+
+        .item:nth-child(4) {
+            height: 120vh
         }
 
         .item.view-in--gt-half {
@@ -50,7 +54,7 @@
         <div class="item" v-view.once="v => v">
             Once handler item element (e)
         </div>
-        <item v-for="i in 1" :index="i" :key="'item-' + i"></item>
+        <item v-for="i in 5" :index="i" :key="'item-' + i"></item>
     </div>
     <script src="../index.js"></script>
     <script src="index.js"></script>
